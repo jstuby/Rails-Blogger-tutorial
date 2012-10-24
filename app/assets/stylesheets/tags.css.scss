@@ -1,0 +1,16 @@
+// Place all the styles related to the tags controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.super-alert {
+  background: red;
+  color: black !important;
+  padding: 5px;
+}
+
+.delete-tag {
+  color: red !important;
+  font-size: 70%;
+  font-weight: bold;
+  vertical-align: super;
+  
+}

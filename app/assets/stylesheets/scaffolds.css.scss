@@ -1,0 +1,167 @@
+@import "compass";
+@import "susy";
+@import "sassy-buttons";
+
+body {
+  @include container;
+
+  background-color: #EEEDF5;
+  color: #000000;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+  &:visited {
+    color: #000000;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+    
+  }
+}
+
+#header {
+  @include span-columns(12,12);
+  //border: 1px solid #AAA;
+  background-color: #FFCC66;
+  border-radius: 15px;
+  margin-top: -20px;
+  padding-top: 40px;
+  position: relative;
+  z-index: 999;
+
+  #login {
+    a {
+      &.login {
+        @include sassy-button("simple", 10px, 14px, #1FA62F);
+        color: #000000;
+      }
+      &.logout {
+        @include sassy-button("simple", 10px, 14px, #990000);
+        color: #000000;
+      }
+
+      margin: 10px;
+      float: right;
+      text-decoration: none;
+    }
+
+    #welcome-message, #please-login {
+      color: 000000;
+      font-size: 1.5em;
+      padding-left: 15px;
+      vertical-align: middle;
+    }
+
+    margin-bottom: 20px;
+  }
+}
+
+#flash-area {
+  @include span-columns(12,12);
+
+  background: #FBFFD1;
+  border-radius: 10px;
+  color: #D16D78;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: -15px 0px 10px 0px;
+  padding: 20px 0px 5px 0px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+#sidebar {
+  @include span-columns(3,12);
+  
+  ul#side-menu {
+    list-style-type: none;
+    padding-left: 0px;
+    
+    li {
+      background: #FFCC66;
+      border-radius: 5px;
+      padding: 2px;
+      margin-bottom: 10px;
+      text-align: center;
+      
+      a {
+        text-decoration: none;
+        display: block;
+      }
+      
+      &:hover {
+        border-bottom: 10px solid #FFFFFF;
+      }
+    }
+  }
+}
+
+#content {
+  @include span-columns(9 omega, 12);
+}
+
+div.field_with_errors label {
+  color: red;
+  font-weight: bold;
+}
+
+div.field_with_errors input {
+  border: 3px solid red;
+}
+
+input[type=submit] {
+    @include sassy-button("simple", 10px, 14px, #FFCC66);
+    color: #000000
+}
+
+
+
+input[type=password], input[type=text], textarea {
+  background-color:#FFF;
+  border:1px solid #dbdbdb;
+  padding:5px;
+  -webkit-border-radius:7px;
+  -moz-border-radius:7px;
+  color: #000;
+  &:focus {
+    outline: none;
+  }
+}
+
+

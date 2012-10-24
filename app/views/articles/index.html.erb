@@ -1,0 +1,14 @@
+<h1>All <%= @articles_displayed %> Articles</h1>
+<% if logged_in? %>
+  <%= link_to " Create a New Article", new_article_path, :class => "new-article" %>
+<% end %>
+<ul id="article-list">
+  <% @articles.each do |article| %>
+    <li>
+      <span class="article-link"><%= link_to article.title, article_path(article), :class => 'article_title', :id => "article_#{article.id}" %></span>
+      <% if article.tags.count > 0 %>
+        <p class="article-tags">Tags: <%= tag_links(article.tags) %></p>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
